@@ -1,0 +1,307 @@
+/* Allgemeine Body-Einstellungen */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f0f5; /* Grauer Hintergrund */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+}
+
+/* Sidebar für Desktop */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff; /* Weiße Sidebar */
+    padding: 20px;
+    overflow-y: auto; /* Ermöglicht Scrollen in der Sidebar */
+    box-shadow: 2px 0px 12px rgba(0, 0, 0, 0.1); /* Schatten für mehr Tiefe */
+    z-index: 1000;
+}
+
+/* Sidebar Links */
+.sidebar a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #007aff; /* Apple Blau für Links */
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Weiche Übergänge */
+}
+
+.sidebar a:hover {
+    background-color: rgba(240, 240, 255, 0.5); /* Leichter Hover-Effekt */
+    color: #0056b3;
+    border-radius: 8px; /* Abgerundete Ecken für den Hover-Effekt */
+}
+
+/* Admin-Bereich Überschrift */
+.sidebar h6 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Trennlinie */
+hr {
+    border: none;
+    border-top: 1px solid rgba(200, 200, 200, 0.5); /* Leichte Trennlinie */
+}
+
+/* Content-Bereich */
+.content {
+    margin-left: 300px; /* Platz für die Sidebar */
+    padding: 40px;
+    background-color: #ffffff; /* Weißer Hintergrund */
+    border-radius: 20px; /* Abgerundete Ecken */
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+    min-height: 100vh;
+}
+
+/* Suchfeld */
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #007aff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #005bb5;
+}
+
+/* Tabellen-Stil */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.95); /* Leicht transparenter Hintergrund */
+    margin-top: 30px;
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05); /* Etwas deutlicherer Schatten */
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 16px 24px;
+    text-align: left;
+    border-bottom: 1px solid rgba(220, 220, 220, 0.7); /* Feinere Trennlinien */
+    font-size: 16px;
+}
+
+table th {
+    background-color: rgba(245, 245, 245, 0.8); /* Sehr heller Hintergrund */
+    font-weight: 600;
+    color: #333;
+}
+
+table tbody tr:hover {
+    background-color: rgba(240, 240, 240, 0.5); /* Leichter Hover-Effekt */
+}
+
+/* Apple-like Button Design */
+.btn {
+    background-color: #007aff; /* Apple Blau */
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 12px; /* Weiche, abgerundete Ecken */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease-in; /* Glatter Übergang für Hover- und Klick-Effekte */
+    box-shadow: 0 6px 15px rgba(0, 122, 255, 0.2); /* Sanfter Schatten */
+    display: inline-block;
+}
+
+/* Hover-Effekt für Apple-ähnliche Buttons */
+.btn:not(.btn-warning):not(.btn-danger):not(.btn-secondary):not(.btn-success):hover {
+    background-color: #005bb5; /* Dunkleres Blau beim Hover */
+    box-shadow: 0 8px 20px rgba(0, 122, 255, 0.3); /* Verstärkter Schatten beim Hover */
+    transform: translateY(-2px); /* Leichter "Lifting"-Effekt */
+}
+
+/* Klick-Effekt für Apple-ähnliche Buttons */
+.btn:active {
+    background-color: #004999; /* Noch dunkler bei Aktivierung */
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.15); /* Weniger intensiver Schatten beim Klicken */
+    transform: translateY(0); /* Button wird bei Klick leicht nach unten gedrückt */
+}
+
+/* Gelber Apple-ähnlicher Button (Warnung) */
+.btn-warning {
+    background-color: #ffcc00; /* Apple Gelb */
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(255, 204, 0, 0.2); /* Sanfter gelber Schatten */
+}
+
+.btn-warning:hover {
+    background-color: #e6b800; /* Dunkleres Gelb beim Hover */
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-warning:active {
+    background-color: #cc9900;
+}
+
+/* Roter Apple-ähnlicher Button (Gefahr) */
+.btn-danger {
+    background-color: #ff3b30; /* Apple Rot */
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(255, 59, 48, 0.2); /* Sanfter roter Schatten */
+}
+
+.btn-danger:hover {
+    background-color: #d8342a;
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(255, 59, 48, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-danger:active {
+    background-color: #c12d25;
+}
+
+/* Grüner Apple-ähnlicher Button (Erfolg) */
+.btn-success {
+    background-color: #34c759; /* Apple Grün */
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(52, 199, 89, 0.2); /* Sanfter grüner Schatten */
+}
+
+.btn-success:hover {
+    background-color: #28a745; /* Dunkleres Grün beim Hover */
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(52, 199, 89, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-success:active {
+    background-color: #218838;
+}
+
+/* Grauer Apple-ähnlicher Button (Sekundär) */
+.btn-secondary {
+    background-color: #8e8e93; /* Apple Grau */
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(142, 142, 147, 0.2); /* Sanfter grauer Schatten */
+}
+
+.btn-secondary:hover {
+    background-color: #6d6d72;
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(142, 142, 147, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+    background-color: #5a5a5e;
+}
+
+/* Einheitliche Schriftfarbe bei Hover */
+.btn:hover,
+.btn-warning:hover,
+.btn-danger:hover,
+.btn-secondary:hover,
+.btn-success:hover {
+    color: #ffffff !important; /* Sicherstellen, dass die Schriftfarbe weiß bleibt */
+}
+
+/* Modale */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Tieferer Schatten für Modals */
+}
+
+.modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.modal-title {
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+}
+
+.modal-body {
+    padding-top: 10px;
+}
+
+.modal-footer {
+    border-top: none;
+    padding-top: 0;
+}
+
+/* Apple-ähnliche Alerts */
+.alert {
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.alert-success {
+    background-color: #d4f8e8; /* Helles Grün */
+    color: #2f855a; /* Dunkles Grün */
+}
+
+.alert-danger {
+    background-color: #fde8e8; /* Helles Rot */
+    color: #c53030; /* Dunkles Rot */
+}
+
+.alert button {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    color: inherit;
+    opacity: 0.5;
+}
+
+.alert button:hover {
+    opacity: 0.75;
+}
+
+/* Responsive Design für mobile Geräte */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Sidebar auf mobilen Geräten ausblenden */
+    }
+
+    .content {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 20px; /* Anpassung für mobile Geräte */
+    }
+}
